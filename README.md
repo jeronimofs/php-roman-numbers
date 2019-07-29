@@ -90,7 +90,7 @@ Follow this steps:
     ```
 4. Require this project as a dependency
     ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php composer.phar require "jeronimofagundes/php-roman-numbers:1.0.0" 
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php composer.phar require "jeronimofagundes/php-roman-numbers:1.0.0" 
     ```
 5. Create the following PHP file in your project folder, named "my-project.php":
     ```php
@@ -102,7 +102,7 @@ Follow this steps:
     ```
 6. Run your file:
     ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php my-project.php 
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php my-project.php 
     ```
 
 # How to test it
