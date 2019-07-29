@@ -83,7 +83,6 @@ To run it, follow this steps:
     ```
 3. Install the dependencies with composer
     ```shell script
-    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer self-update
     docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer install 
     ```
 4. Run the file example.php:
@@ -106,7 +105,6 @@ Follow this steps:
     ```
 4. Run PHPUnit
     ```shell script
-    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer self-update
     docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest /app/phpunit --bootstrap /app/vendor/autoload.php /app/tests
     ```
       
