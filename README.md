@@ -87,7 +87,7 @@ To run it, follow this steps:
     ```
 4. Run the file example.php:
     ```shell script
-    docker run -it -u="$UID" -v $pwd:/app -w="/app" jeronimofagundes/php-composer:latest php example.php 
+    docker run -it -u="$UID" -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest php example.php 
     ```
 
 # How to test it
