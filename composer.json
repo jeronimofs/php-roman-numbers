@@ -1,0 +1,23 @@
+{
+    "name": "jeronimofagundes/php-roman-numbers",
+    "description": "A helper to convert roman numbers from/to decimal numbers.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeronimo Fagundes",
+            "email": "jeronimo@jeronimofagund.es"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jeronimofagundes\\": "src/Jeronimofagundes/"
+        }
+    }
+}
