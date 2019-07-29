@@ -83,10 +83,10 @@ Follow this steps:
     ```
 3. Download composer (watch your folder's path)
     ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php composer-setup.php
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php -r "unlink('composer-setup.php');" 
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php composer-setup.php
+    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "unlink('composer-setup.php');" 
     ```
 4. Require this project as a dependency
     ```shell script
