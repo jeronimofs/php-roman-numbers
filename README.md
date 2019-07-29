@@ -77,18 +77,18 @@ To run it, follow this steps:
     git clone https://github.com/jeronimofagundes/php-roman-numbers.git
     cd php-roman-numbers
     ```
-2. . Pull the docker image for PHP 7.2
+2. . Pull the docker image
     ```shell script
-    docker pull php:7.2
+    docker pull jeronimofagundes/php-composer:latest
     ```
 3. Install the dependencies with composer
     ```shell script
-    docker run -it -v $PWD:/app -w="/app" php:7.2 php composer.phar self-update
-    docker run -it -v $PWD:/app -w="/app" php:7.2 php composer.phar install 
+    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer self-update
+    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer install 
     ```
 4. Run the file example.php:
     ```shell script
-    docker run -it -v $pwd:/app -w="/app" php:7.2 php example.php 
+    docker run -it -v $pwd:/app -w="/app" jeronimofagundes/php-composer:latest php example.php 
     ```
 
 # How to test it
@@ -100,13 +100,13 @@ Follow this steps:
     git clone https://github.com/jeronimofagundes/php-roman-numbers.git
     cd php-roman-numbers
     ```
-2. Pull the docker image for PHP 7.2
+2. Pull the docker image
     ```shell script
-    docker pull php:7.2
+    docker pull jeronimofagundes/php-composer:latest
     ```
 4. Run PHPUnit
     ```shell script
-    docker run -it -v $PWD:/app -w="/app" php:7.2 php composer.phar self-update
-    docker run -it -v $PWD:/app php:7.2 /app/phpunit --bootstrap /app/vendor/autoload.php /app/tests
+    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest composer self-update
+    docker run -it -v $PWD:/app -w="/app" jeronimofagundes/php-composer:latest /app/phpunit --bootstrap /app/vendor/autoload.php /app/tests
     ```
       
