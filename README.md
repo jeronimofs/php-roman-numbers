@@ -70,59 +70,41 @@ echo Helper::toArabic('MMXIX'); // prints 2019
 ... 
 ```
 
-The following give you a tip on how to use it yourself using docker. 
-Follow this steps:
-1. Create a folder to your project and cd into it
+I included a file named example.php showing how to use the library. 
+To run it, follow this steps:
+1. Clone this repository and cd into it
     ```shell script
-    mkdir my-project
-    cd my-project
+    git clone https://github.com/jeronimofagundes/php-roman-numbers.git
+    cd php-roman-numbers
     ```
-2. Pull the docker image for PHP 7.2
+2. . Pull the docker image for PHP 7.2
     ```shell script
     docker pull php:7.2
     ```
-3. Download composer (watch your folder's path)
+3. Install the dependencies with composer
     ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php composer-setup.php
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php -r "unlink('composer-setup.php');" 
+    docker run -it -v $PWD:/app -w="/app" php:7.2 php composer.phar install 
     ```
-4. Require this project as a dependency
+4. Run the file example.php:
     ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php composer.phar require "jeronimofagundes/php-roman-numbers:1.0.0" 
-    ```
-5. Create the following PHP file in your project folder, named "my-project.php":
-    ```php
-    <?php
-    require_once 'vendor/autoload.php';
-    use \Jeronimofagundes\Numbers\Roman\Helper;
-    echo Helper::fromArabic(2019) . PHP_EOL; // prints MMXIX
-    echo Helper::toArabic('MMXIX') . PHP_EOL; // prints 2019
-    ```
-6. Run your file:
-    ```shell script
-    docker run -it -v /path/to/your/project/my-project:/app -w="/app" php:7.2 php my-project.php 
+    docker run -it -v $pwd:/app -w="/app" php:7.2 php example.php 
     ```
 
 # How to test it
 We need to use PHPUnit to execute the tests, 
 and we will do it using docker.
 Follow this steps:
-1. Clone this repository
+1. Clone this repository and cd into it
     ```shell script
     git clone https://github.com/jeronimofagundes/php-roman-numbers.git
+    cd php-roman-numbers
     ```
 2. Pull the docker image for PHP 7.2
     ```shell script
     docker pull php:7.2
     ```
-3. cd to the project's folder
+4. Run PHPUnit
     ```shell script
-    cd php-roman-numbers
-    ```
-4. Run PHPUnit using the docker's image and adjusting your path:
-    ```shell script
-    docker run -it -v /path/to/the/project/php-roman-numbers:/app php:7.2 /app/phpunit --bootstrap /app/vendor/autoload.php /app/tests
+    docker run -it -v $PWD:/app php:7.2 /app/phpunit --bootstrap /app/vendor/autoload.php /app/tests
     ```
       
