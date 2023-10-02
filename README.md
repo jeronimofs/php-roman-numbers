@@ -74,7 +74,7 @@ I included a file named example.php showing how to use the library.
 To run it, follow this steps:
 1. Clone this repository and cd into it
     ```shell script
-    git clone https://github.com/jeronimofagundes/php-roman-numbers.git
+    git clone https://github.com/jeronimofs/php-roman-numbers.git
     cd php-roman-numbers
     ```
 2. . Pull the docker image
@@ -96,7 +96,7 @@ and we will do it using docker.
 Follow this steps:
 1. Clone this repository and cd into it
     ```shell script
-    git clone https://github.com/jeronimofagundes/php-roman-numbers.git
+    git clone https://github.com/jeronimofs/php-roman-numbers.git
     cd php-roman-numbers
     ```
 2. Pull the docker image

@@ -4,7 +4,7 @@
  *
  * This helper provides methods to perform conversion between arabic and roman numbers.
  *
- * @author Jeronimo Fagundes <jeronimo@jeronimofagund.es>.
+ * @author Jerônimo Fagundes da Silva <jeronimo.fs@protonmail.com>.
  *
  * @license MIT.
  *
